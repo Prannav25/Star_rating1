@@ -1,0 +1,90 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #1c1e21;
+}
+
+/* Container for all movie cards */
+.movie-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Movie Card */
+.movie-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.movie-card h2 {
+    font-size: 1.25em;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    color: #606770;
+    line-height: 1.4;
+    height: 80px; /* Gives a consistent height */
+    overflow: hidden;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    margin-top: 20px;
+}
+
+.star {
+    font-size: 2.5rem; /* Makes stars bigger */
+    color: #ccc; /* Default color for an unselected star */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* When a star is selected */
+.star.selected {
+    color: #ffc107; /* Gold color for selected star */
+}
+
+/* When hovering over stars */
+.star-rating:hover .star {
+    color: #ffdd44; /* Brighter gold for hover effect */
+}
+
+/* This ensures that stars to the left of the hovered star also light up */
+.star:hover ~ .star {
+    color: #ccc;
+}
